@@ -27,7 +27,6 @@ Restart the terminal. Test it.
 	
 	mvn -version
 
-
 	Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 23:22:22+0800)
 	Maven home: /Users/mkyong/apache-maven-3.1.1
 	Java version: 1.7.0_05, vendor: Oracle Corporation
@@ -39,6 +38,29 @@ Restart the terminal. Test it.
 Creating a maven project
 
 	mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+	You will notice that the generate goal created a directory with the same name given as the artifactId. Change into that directory.
+	cd my-app
+
+
+The POM
+
+	The pom.xml file is the core of a project's configuration in Maven. It is a single configuration file that contains the majority of information required to build a project in just the way you want. The POM is huge and can be daunting in its complexity, but it is not necessary to understand all of the intricacies just yet to use it effectively. This project's POM is:
+
+	
+Build the Project
+	
+	mvn package
+
+
+Running MVN Tools
+
+	mvn clean dependency:copy-dependencies package
+
+
+
+
+
 
 
 
